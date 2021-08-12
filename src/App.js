@@ -1,25 +1,88 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Login from "./pages/login";
+import Dashboard from "./pages/dashboard";
+import Paciente from "./pages/paciente";
+import Vacunacion from "./pages/vacunacion";
+import Registropaciente from "./pages/registropaciente";
+import Registrovacunacion from "./pages/registrovacuna";
+import Viewpaciente from "./pages/Viewpaciente";
+import Viewvacuna from "./pages/Viewvacuna";
+import Viewdashboard from "./pages/Viewdashboard";
+import Error404 from "./pages/error404";
+import React from "react";
+import {BrowserRouter as Router,Switch,Route,Link, Navlink, Redirect} from "react-router-dom";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+         <div id="container-fluid overflow-hidden">
+    <Router>
+        
+         <Switch>
+           <Route exact path="/" render={() => (<Redirect to="/home"/>)}>
+          </Route>
+
+            <Route exact path="/home">
+            <Login/>
+          </Route>
+
+           <Route exact path="/dashboard">
+            <Dashboard/>
+          </Route>
+
+
+          <Route exact path="/paciente">
+            <Paciente/>
+          </Route>
+
+           <Route exact path="/vacunacion">
+            <Vacunacion/>
+          </Route>
+
+           <Route exact path="/registropaciente">
+            <Registropaciente/>
+          </Route>
+
+           <Route exact path="/update/:id">
+            <Registropaciente/>
+          </Route>
+
+               <Route exact path="/update2/:id" >
+            <Registrovacunacion/>
+          </Route>
+
+
+           <Route exact path="/registrovacuna">
+            <Registrovacunacion/>
+          </Route>
+          
+
+           <Route exact path="/Viewpaciente/:id">
+            <Viewpaciente/>
+          </Route>
+
+            <Route exact path="/Viewvacuna/:id">
+            <Viewvacuna/>
+          </Route>
+
+           <Route exact path="/Viewdashboard/:id">
+            <Viewdashboard/>
+          </Route>
+
+          <Route  exact path="*" component={Error404}/>
+       </Switch>
+   
+    </Router>
     </div>
+
   );
 }
 
 export default App;
+
+
+
+
+
