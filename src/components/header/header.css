@@ -1,0 +1,111 @@
+header {
+   max-width: 1400px;
+   width: 100%;
+   min-height: 50px;
+   height: 100%;
+   display: grid;
+   grid-template-columns: 60% 40%;
+   background-color: #FFFFFF;
+  
+}
+
+.logo img{
+   max-width: 430px;
+   width: 100%;
+   padding: 30px;
+}
+
+
+#botones{
+   max-width: 350px;
+   width: 100%;
+   min-height: 100px;
+   height: 100%;
+   display: flex;
+   padding-top: 10px;
+   padding-left: 60px;
+   margin: auto;
+}
+
+
+
+p{
+
+ text-decoration: none;
+ font-weight: bolder;
+ text-align: center;
+ color: #464646;  
+}
+
+span{
+   color: #F2692F;
+}
+.usuario{
+   padding: 20px;
+}
+
+.usuario a{
+   padding-left: 30%;
+}
+
+
+
+
+@media screen and (max-width:1024px){
+   #botones{
+      padding: 0px 0px 20px 0px ;
+      width: 100%;
+}
+.logo img{
+   max-width: 400px;
+   width: 100%;
+}
+
+}
+
+
+@media screen and (max-width:768px){
+   #botones{
+      width: 70%;
+}
+
+header{
+   grid-template-columns: 50% 50%;
+}
+}
+
+
+@media screen and (max-width:425px){
+   #botones{
+      padding: 15px 25px ;
+      width: 17rem;
+      margin: auto;
+}
+.logo {
+   max-width: 300px;
+   width: 100%;
+}
+.logo img{
+   max-width: 100%;
+   padding: 50px;
+   
+}
+header{
+   margin-left: 10px;
+   display: block;
+}
+
+}
+
+@media screen and (max-width:320px){
+.logo {
+   max-width: 250px;
+   width: 100%;
+
+}
+.logo img{
+   max-width: 100%;
+   padding: 30px;
+   
+}
+}
