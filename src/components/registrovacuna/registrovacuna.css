@@ -1,0 +1,544 @@
+.containeregistro2{
+    
+    background-image: url("../../assets/images/fondoregisvacuna.jpg");
+    background-size: cover;
+    max-width: 1400px;
+    width: 100%;
+}
+.formulario{
+    background-color: white;
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+.cajafor{
+    margin: 100px auto;
+    margin-top: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 20px;
+    padding: 15px;
+   font-weight: 500;
+  
+}
+.card-antecedentes {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+    margin-left: 2rem;
+}
+.form-a-i {
+    display: inline-block;
+    margin-right: 4rem;
+}
+.form-selectlugar{
+   width: 78%;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    border: none;
+    
+}
+.form-check {
+    display: inline-block;
+    min-height: 1.5rem;
+    padding-left: 5.5em;
+    margin-bottom: .125rem;
+}
+.form-check-input:checked {
+    background-color: #F2692F;
+    border-color: #F2692F;
+}
+.form-a {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5em;
+    margin-bottom: .125rem; 
+}
+.punto:checked {
+    background-color: #F2692F;
+    border-color: #F2692F;
+}
+
+/*------ INICIO BOTONES-----*/
+.botonregresar{
+    color: #fff;
+    background: #F2692F;
+    border-color: #F2692F;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    margin-top: 30px;
+    box-shadow: 2px 2px 8px #000000;
+    margin-left: 30px;
+    
+}
+.botoncerrar{
+    color: #fff;
+    background: #F2692F;
+    border-color: #F2692F;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 8px #000000;
+    margin-left: 600px;
+    
+}
+.botonregistrar{
+    color: #fff;
+    background: #F2692F;
+    border-color: #F2692F;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 8px #000000;
+    margin-left: 78px;  
+}
+.botonregresar:hover {
+    background-color:#A7A9AC;
+    color: #000;
+    border:1px solid #A7A9AC;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px #000000;
+}
+.botonregistrar:hover {
+    background-color:#A7A9AC;
+    color: #000;
+    border:1px solid #A7A9AC;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px #000000;
+}
+.botoncerrar:hover{
+    background-color:#A7A9AC;
+    color: #000;
+    border:1px solid #A7A9AC;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px #000000;
+}
+/*------ FIN BOTONES-----*/
+
+
+/*------ INICIO TITULO Y SUBTITULOS-----*/
+.titulo h1{
+    text-align: center;
+    color: #FFF;
+}
+.datosformulario{
+ font-weight: bolder;
+ color: #464646;
+
+}
+
+.datosformulario3{
+ font-weight: bolder;
+ color: #464646;
+ text-align: center;
+}
+
+
+span{
+   color: #F2692F;
+}
+.datosformulario2{
+ font-weight: bolder;
+ color: #F2692F;
+}
+.datosformulario2-2{
+   color: #464646;
+}
+/*------ FIN TITULO Y SUBTITULOS-----*/
+
+/*------ INICIO LABEL-----*/
+#renglonpaciente{
+    width: 85px;
+    padding-right:3px;
+}
+#renglonantecedentes{
+    width: 290px;
+}
+
+#renglonfedosis{
+ 
+    padding-right: 22px;
+}
+#renglonfedosis2{
+ 
+    padding-right: 22px;
+}
+#renglon4{
+    width: 100px;
+    padding-right: 5px;
+}
+
+#renglonedad {
+    width: 90px;
+}
+#rengloncuales{
+    padding-right: 20px;
+}
+#renglontipo {
+   
+    padding-right: 10px;
+}
+#renglonfecha {
+    padding-right: 29px;
+}
+#renglonaplicacion {
+    padding-right: 27px;
+}
+#renglonprofesional {
+    padding-right: 27px;
+}
+#renglonlugar {
+    padding-right: 27px;
+}
+
+/*------ FIN LABEL-----*/
+
+/*------ INICIO INPUTS-----*/
+.inputnom2{
+    
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    box-shadow: 0 1px 5px #ced4da;
+    width: 80%;
+
+}
+.inputnom3 {
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    box-shadow: 0 1px 5px #ced4da;
+    width: 85%;
+}
+.inputid{
+
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    box-shadow: 0 1px 5px #ced4da;
+    width: 67%;
+}
+.inputselect{
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    box-shadow: 0 1px 5px #ced4da;
+    width: 73%;
+}
+.inputselectlugar{
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    box-shadow: 0 1px 5px #ced4da;
+    width: 77%;
+}
+
+.inputselect2{
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    box-shadow: 0 1px 5px #ced4da;
+    width: 73%;
+}
+.inputselect3{
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    box-shadow: 0 1px 5px #ced4da;
+    width: 73%;
+}
+
+.inputselect5{
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    box-shadow: 0 1px 5px #ced4da;
+    width: 73%;
+}
+.inputnum{
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    box-shadow: 0 1px 5px #ced4da;
+    width: 63%;
+}
+
+.inputfecha{
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    box-shadow: 0 1px 5px #ced4da;
+    width: 77%;
+}
+.inputfecha2{
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    box-shadow: 0 1px 5px #ced4da;
+    width: 77%;
+}
+.inputer{
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    box-shadow: 0 1px 5px #ced4da;
+    width: 57%;
+}
+
+
+.inputalergia{
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    box-shadow: 0 1px 5px #ced4da;
+    width: 84%;
+}
+.inputcuales {
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    box-shadow: 0 1px 5px #ced4da;
+    width: 88%;
+}
+.inpute{
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    box-shadow: 0 1px 5px #ced4da;
+    width: 55%;
+}
+.inputlugar {
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    box-shadow: 0 1px 5px #ced4da;
+    width: 77%;
+}
+/*------ FIN INPUTS-----*/
+
+
+@media screen and (max-width:768px){
+    .botonregistrar{
+        margin-left: 200px;
+    }
+    .botoncerrar{
+        margin-left: 380px;
+    }
+    .form-selectlugar {
+    width: 69%;
+    }
+    .inpute{
+        width: 90%;
+    }
+    .inputnum{
+        width: 90%;
+    }
+    .inputnom2{
+        width: 97%;
+    }
+    .inputnomti {
+    width: 68%;
+    }
+    .inputselect{
+        width: 86%;
+    }
+    .inputfecha{
+        width: 69%;
+    }
+    .inputer{
+        width: 60%;
+    }
+    .inputid{
+        width: 90%;
+    }
+    .inputselect2 {
+    width: 75%;
+    }
+    .inputselect3{
+    width: 78%;
+    }
+   
+    .inputselect5{
+    width: 97%;
+    }
+   
+    .inputbarrio, {
+    width: 97%;    
+    }
+    
+    
+    .inputalergia {
+    width: 72%;
+    }
+    .inputnom3{
+        width: 514px;
+    }
+    .inputfecha2{
+        width: 447px;
+    }
+    #renglonsex{
+    width: 50px;
+    }
+    #renglonrh{
+    width: 40px;
+    }
+    #renglon4{
+    width: 140px;
+    padding-right: 6px;
+    }
+    #renglon {
+    width: 85px;
+    }
+    #renglonpaciente{
+    width: 99px;
+    }
+    #renglontipo{
+
+    }
+  }

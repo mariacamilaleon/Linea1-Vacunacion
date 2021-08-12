@@ -1,0 +1,22 @@
+.tablapaciente{
+    max-width: 1400px;
+    width: 100%;
+    min-height: 450px;
+    height: 100%;
+}
+
+.listadopacientes{
+
+ font-weight: bolder;
+ text-align: center;
+ color: #464646;
+ font-size: 2em;
+ padding: 20px;  
+}
+
+.datospersonales{
+    border: 1px solid black;
+    font-size: 2em;
+    margin-left: 30px;
+}
+
