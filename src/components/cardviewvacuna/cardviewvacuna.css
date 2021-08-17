@@ -1,0 +1,144 @@
+.containerview2{
+   background-image: url("../../assets/images/view_paciente.jpg");
+    background-size: cover;
+    max-width: 1400px;
+    width: 100%;
+
+   } 
+.card-bodyview2 p{
+   text-align: left;
+   margin: 45px;
+   margin-left: 5px;
+   }
+.card-bodyview2{
+  
+   font-weight: normal;
+   margin-left: 30px;   
+}
+.card-textdosis{
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+
+}
+.cardosis1{
+    background-color: white;
+    max-width: 700px;
+    width: 100%;
+    padding: 30px;
+    margin: auto;
+    margin-top: 15%;
+    margin-bottom: 35px;
+
+}
+.cardosis2{
+    background-color: white;
+    max-width: 700px;
+    width: 100%;
+    padding: 30px;
+    margin: auto;
+    margin-bottom: 80px;
+
+}
+.cardatos{
+    
+ margin-top: 30%;
+ margin-left: 5px;
+}
+.card-body{
+  margin: 5px;
+}
+
+.datosview2{
+ font-weight: bolder;
+ color: #464646;
+ text-align: start;
+ margin-top: 30px;
+ margin-left: 30px;
+ font-size: 19px;
+}
+.datosviewdosis{
+ font-weight: bolder;
+ color: #464646;
+ text-align: center;
+ margin-top: 7px;
+ font-size: 19px;
+}
+span{
+   color: #F2692F;
+}
+
+.botonview2{
+   color: #fff;
+    background-color: #F2692F;
+    border-color: #F2692F;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    box-shadow: 2px 2px 8px #000000;
+    margin: auto;
+    margin-top: 45px;
+    width: 150px;
+    text-decoration: none;
+    position: absolute;
+    font-weight: bolder;
+    font-size: 1.5em;  
+}
+
+
+.botonview2:hover {
+   background-color:#A7A9AC;
+    color: #000;
+    border:1px solid #A7A9AC;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px #000000;
+}
+
+
+@media screen and (max-width:768px){
+   .botonview2{
+      margin-left: 10%;
+   }
+   .cardosis1, .cardosis2{
+      width: 90%;
+   
+   }
+}
+
+@media screen and (max-width:425px){
+  
+ .cardosis1, .cardosis2{
+      width: 90%;
+   
+   }
+  
+    .botonview2{
+      margin-left: 20%;
+   }
+   .table th{
+      max-width: 30px;
+      font-size: 0.9em;
+   }
+
+}
+
+@media screen and (max-width:375px){
+   .botonview2{
+      margin-left: 15%;
+   }
+}
+
+@media screen and (max-width:320px){
+
+   .table th{
+      max-width: 30px;
+      font-size: 0.7em;
+   }
+   .botonview2{
+      max-width: 100px;
+      width: 100%;
+      font-size: 1em ;
+      margin-left: 13%;
+   }
+
+}

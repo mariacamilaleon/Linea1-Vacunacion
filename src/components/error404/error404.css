@@ -1,0 +1,19 @@
+.container-error img{
+	max-width: 1400px;
+	width: 100%;
+}
+.tituloerror{
+	color: #69D1C5;
+	text-align: center;
+
+}
+
+.tituloerror:hover{
+	text-decoration: underline;
+	color: #F2692F;
+}
+@media screen and (max-width:768px){
+	.container-error img{
+		width: 100%;
+	}
+}

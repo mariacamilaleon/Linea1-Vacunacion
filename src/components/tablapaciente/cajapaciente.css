@@ -1,0 +1,225 @@
+
+
+.cajapaciente{
+   max-width: 1400px;
+   width: 100%;
+   min-height: 400px;
+   height: 100%;
+   background-image: url("../../assets/images/bannerPaciente.png");
+}
+
+
+p{
+
+ text-decoration: none;
+ font-weight: bolder;
+ text-align: center;  
+}
+
+span{
+   color: #F2692F;
+}
+.registropaciente{
+   max-width: 400px;
+   width: 100%;
+   min-height: 65px;
+   height: 100%;
+   border-radius: 15px 15px 15px 15px;
+   margin-left: 4%;
+   margin-top: 4.5%;
+   background-color:#F2692F;
+   opacity: 80%;
+   color: #FFFFFF;
+   font-size: 1.5em;
+   font-weight: bolder;
+ 
+}
+
+.d-flex2{
+   margin-top: 4.5%;
+   margin-left: 18%;
+   max-width: 850px;
+   width: 100%;
+   display: flex;
+}
+
+.barras{
+   max-width: 1400px;
+   width: 100%;
+   display: flex;
+}
+
+
+.d-flex2 .form-control{
+   background-image: url("../../assets/images/buscando.png");
+   background-repeat: no-repeat;
+   background-size: 35px;
+   background-position: 0.5rem center;
+   padding: 15px;
+   padding-left: 50px;
+   max-width: 450px;
+   width: 100%;
+   border-radius: 15px 0 0 15px;
+   font-size: 1.5em;
+
+
+}
+
+.d-flex2 button{
+   max-width: 150px;
+   width: 100%;
+   min-height: 65px;
+   height: 100%;
+   padding: 15px;
+   background-color:#F2692F;
+   opacity: 80%;
+   color: #FFFFFF;
+   font-size: 1.5em;
+   font-weight: bolder;
+   border-radius: 0 15px 15px 0;
+
+   
+
+}
+
+@media screen and (max-width:1024px){
+
+
+
+   .registropaciente{
+      margin-left: 5%;
+   }
+
+     .d-flex2{
+      margin: 3em 0 0 4em;
+   }
+
+   .d-flex2 .form-control{
+      max-width: 300px;
+      width: 100%;
+   }
+}
+
+@media screen and (max-width:768px){
+
+   .registropaciente{
+      margin: 3em 0 0 3em;
+      max-width: 250px;
+      width: 100%x;
+      font-size: 1em;
+   }
+   .d-flex2{
+      margin: 3em 0 0 4em;
+   }
+   .d-flex2 .form-control{
+      max-width: 200px;
+      width: 100%;
+    
+       font-size: 1em;  
+   }
+   .d-flex2 button{
+      font-size: 1em;
+   
+   }
+} 
+
+
+@media screen and (max-width:425px){
+#botones{
+   max-width: 350px;
+   width: 100%;
+}
+#botones img{
+   margin-right: 40px;
+}
+   .cajapaciente{
+      min-height: 480px;
+      height: 100%   ;
+   }
+   .barras{
+      display: flex;
+      display: block;
+   }
+   .registropaciente{
+      margin: 1.5em 0 0 3.5em;
+      max-width: 280px;
+      width: 100%x;
+      font-size: 1em;
+   }
+
+      .d-flex2{
+      margin: 1em 0 0 2.3em;
+   }
+
+   .d-flex2 .form-control{
+      max-width: 220px;
+      width: 100%;
+  
+       font-size: 1em;  
+   }
+   .d-flex2 button{
+       max-width: 100px;
+      width: 100%;
+      font-size: 1em;
+    
+   }
+} 
+
+
+@media screen and (max-width:375px){
+
+   .registropaciente{
+      margin: 3.5em 0 0 2.5em;
+      max-width: 280px;
+      width: 100%x;
+      font-size: 1em;
+   }
+
+   .d-flex2{
+      margin: 1em 0 0 1em;
+   }
+
+   .d-flex2 .form-control{
+      max-width: 220px;
+      width: 100%;
+       font-size: 1em;  
+   }
+   .d-flex2 button{
+       max-width: 100px;
+      width: 100%;
+      font-size: 1em;
+    
+   }
+}
+
+
+@media screen and (max-width:320px){
+
+   .barras{
+      display: flex;
+      display: block;
+   }
+   .registropaciente{
+      margin: 5em 0 0 1.5em;
+      max-width: 250px;
+      width: 100%x;
+      font-size: 1em;
+   }
+
+      .d-flex2{
+      margin: 1em 0 0 0.5em;
+   }
+   .d-flex2 .form-control{
+      max-width: 170px;
+      width: 100%;
+      margin: 0 ;     
+      font-size: 1em;  
+   }
+   .d-flex2 button{
+       max-width: 100px;
+      width: 100%;
+      font-size: 1em;
+   
+   }
+} 
+

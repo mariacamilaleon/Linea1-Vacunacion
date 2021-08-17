@@ -1,0 +1,31 @@
+
+
+.cajavacunacion{
+   max-width: 1400px;
+   width: 100%;
+   min-height: 400px;
+   height: 100%;
+   background-image: url("../../assets/images/bannerVacunacion.png");
+}
+
+
+p{
+
+ text-decoration: none;
+ font-weight: bolder;
+ text-align: center;  
+}
+
+span{
+   color: #F2692F;
+}
+
+
+@media screen and (max-width:425px){
+
+.cajavacunacion{
+   min-height: 480px;
+   height: 100%;
+}
+}
+
