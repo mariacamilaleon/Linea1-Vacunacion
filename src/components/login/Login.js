@@ -2,8 +2,16 @@ import './login.css';
 import login from '../../assets/images/login_image.png';
 import forja from '../../assets/images/logoforja.png';
 import Swal from "sweetalert2";
+import React, {useState, Component} from 'react';
 
 function Loginc(){
+
+
+const [shown, setShown] = React.useState(false);
+const switchShown = () => setShown(!shown);
+
+const [password, setPassword] = React.useState('');
+const onChange = ({ currentTarget }) => setPassword(currentTarget.value);
 
 
 let usuario1= "forja"
@@ -11,9 +19,6 @@ let usuario1= "forja"
 
 
   const handleSubmit=(e)=>{
-
-   // console.log(e.target.querySelector('#usuario').value)
-
 
     let usuario = e.target.querySelector('#usuario').value
     let contrasena = e.target.querySelector('#contrasena').value
@@ -86,12 +91,18 @@ let usuario1= "forja"
 		              </div>
                       <br></br>
 		              <div className="input-group mb-3">
-						 <input id="contrasena" type="password" className="input-login " placeholder="Contraseña" aria-label=".form-control-lg example" />
+						 <input id="contrasena" 
+               type={shown ? 'text' : 'password'}
+               onChange={onChange}
+               value = {password}
+              className="input-login " 
+              placeholder="Contraseña" 
+              aria-label=".form-control-lg example" />
 					  </div>
 					  
 					  <div id="feedbackpass">
                               <div className="py-3 checkbox-login">
-                                  <input type="checkbox" onclick="myFunction()"/> Mostrar Contraseña
+                                  <input type="checkbox" onClick={switchShown} />  Mostrar Contraseña
                               </div>
                       </div>
                       <div className="mb-3">

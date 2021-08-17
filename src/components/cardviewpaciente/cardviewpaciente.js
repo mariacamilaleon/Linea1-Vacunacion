@@ -38,14 +38,14 @@ const Viewpaciente =()=> {
 
           return(
 
-            <div className="cardcontainerview">
+            <div className="cardcontainerview1">
 
                 <div>
              <Link to={`/paciente`}><button  className="botonregresar">Regresar</button></Link>
            </div>
 
           
-               <div className="cardview">
+               <div className="cardview1">
 
                   <h5 className="datosview1"><span>DATOS</span> BÁSICOS PACIENTE</h5>
 

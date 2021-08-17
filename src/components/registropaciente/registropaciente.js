@@ -7,11 +7,28 @@ import fireDb from "../../firebase";
 import Autocomplete from 'react-autocomplete';
 import {isEmpty} from "lodash";
 import Swal from "sweetalert2";
-
+import axios from "axios";
 
 
 
 const Registropaciente =()=> {
+
+
+const [nacionalidades, setNacionalidades]=useState([])
+
+
+const getNacionalidades= ()=> {
+  axios
+  .get("https://countriesnow.space/api/v0.1/countries/population")
+  .then((response) => {
+    console.log(response.data.data);
+    setNacionalidades(response.data.data)
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+}
+
 
   const values = {
     idpaciente:"",
@@ -20,7 +37,7 @@ const Registropaciente =()=> {
     numidentificacion: "",
     fechanacimiento: "",
     edad:"",
-    sexo:"femenino",
+    sexo:"",
     rh:"",
     regimen:"",
     eps:"",
@@ -54,6 +71,8 @@ const Registropaciente =()=> {
 
  useEffect (()=>{
 
+    getNacionalidades()
+
     fireDb.child("pacientes").on("value",(snapshot)=>{
       if(snapshot.val()!==null){
         setData({
@@ -79,19 +98,19 @@ const onRegister=(id) =>{
  Swal.fire({
 
   html:
-   '<b style="color:black; font-size: 2em ">Paciente Registrado con éxito</b></br><b style="color:red; font-size: 1.5em ">¿Desea hacer el registro de vacunación? </b>',
+   '<b style="color:black; font-size: 2em ">Paciente Registrado con éxito</b></br><b style="font-size: 1.5em ">¿Desea hacer el registro de vacunación? </b>',
   width: 600,
   background: 'rgba(237, 240, 250) ',
   imageUrl: 'https://forjaempresas.com/wp-content/uploads/2020/08/Logos-01-1.png',
   showCancelButton: true,
   confirmButtonColor: '#d33',
   cancelButtonColor: '#F2692F',
-  confirmButtonText: 'Vacunacion!',
-  cancelButtonText: 'Inicio',
+  confirmButtonText: 'Ir a Vacunación',
+  cancelButtonText: 'Ir a Paciente',
 
 }).then((result) => {
   if (result.isConfirmed) {
-    history.push("/vacunacion")
+     history.push("/vacunacion")
   }
   if (!result.isConfirmed) {
     history.push("/paciente")
@@ -190,7 +209,7 @@ const onRegister=(id) =>{
                     </div>
                     <div className="col-sm-12 col-md-3 col-lg-4 mt-3">
                         <label id="renglon" className="control-label " htmlFor="ID">ID Paciente: </label>
-                        <input className="inputid" placeholder="ID" id="idpaciente" type="number" name="idpaciente" value={idpaciente} onChange={handleInputChange}/>
+                        <input className="inputid" placeholder="ID" id="idpaciente" type="text" name="idpaciente" value={idpaciente} onChange={handleInputChange}/>
                     </div>
                  </div>
 
@@ -202,6 +221,7 @@ const onRegister=(id) =>{
                        <option value="NUIP">Número único de identificación personal (NUIP)</option>
                        <option value="Tarjeta de Identidad">Tarjeta de Identidad (TI)</option>
                        <option value="Cédula de Ciudadania">Cédula de Ciudadania</option>
+                       <option value="Pasaporte">Pasaporte</option>
                        <option value="Cédula de Extranjeria">Cédula de Extranjeria</option>
                      </select>
                      <div className="valid-feedback">Campo OK</div>
@@ -209,9 +229,9 @@ const onRegister=(id) =>{
                    </div>
                    <div className="col-sm-12 col-md-3 col-lg-5 mt-3">  
                       <label id="renglon2" htmlFor="identificacion">Número de identificación: </label>
-                      <input className="inputnum" type="number" id="numidentificacion" name="numidentificacion" value={numidentificacion} size="20" maxLength="20" value={numidentificacion} pattern="[a-z]{1,15}" onChange={handleInputChange} required/>
+                      <input className="inputnum" type="text" id="numidentificacion" name="numidentificacion" value={numidentificacion} size="20" maxLength="20" value={numidentificacion} pattern="[A-z\0-9]{1,15}" onChange={handleInputChange} required/>
                       <div className="valid-feedback">Campo OK</div>
-                      <div className="invalid-feedback">El valor debe ser numérico y tener entre 5 y 15 caracteres</div> 
+                      <div className="invalid-feedback">El valor debe tener entre 5 y 25 caracteres</div> 
                    </div>
                  </div>
 
@@ -325,10 +345,15 @@ const onRegister=(id) =>{
                  <div className="row">
                    <div className="col-sm-12 col-md-12 col-lg-8 mt-3">
                       <label id="renglonacion" htmlFor="nacionalidad">Nacionalidad:</label>
-                     <select className="inputselect3 form-select" name="nacionalidad" id="nacionalidad" value={nacionalidad} onChange={handleInputChange}required>    
-                       <option value="0" selected=""></option>
-                       <option value=""></option>
-                       <option value=""></option>
+                     <select className="inputselect3 form-select" name="nacionalidad" id="nacionalidad" value={nacionalidad} onChange={handleInputChange}required>
+                      <option value={0}>Seleccione el país</option>
+                      {
+                        nacionalidades && nacionalidades.map((e,i)=>{
+                          return (
+                             <option value={e.country} key={i}>{e.country} </option>
+                            )
+                        })
+                      }
                      </select>
                      <div className="valid-feedback">Campo OK</div>
                      <div className="invalid-feedback">Complete los datos</div>
@@ -449,7 +474,7 @@ const onRegister=(id) =>{
                     </div> 
                  </div>
                   <div className="row">
-                    <div className="col-sm-12 col-md-6 col-lg-9 mt-3">
+                    <div className="col-sm-12 col-md-6 col-lg-9 mt-3" >
                       <Link to={`/paciente`}><button  className="botoncerrar">CERRAR</button></Link>
 
                     </div>
