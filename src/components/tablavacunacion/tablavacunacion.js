@@ -14,8 +14,18 @@ import fireDb from "../../firebase";
 
 const Tablavacunacion =()=> {
 
-  const [data, setData] =  useState({});
 
+  const [searchTerm, setsearchTerm] = useState("");
+
+ const values = {
+   
+    numidentificacion: "",
+   
+  };
+
+ const [data, setData] =  useState({});
+ const [initialState, setState] = useState(values);
+ const{ numidentificacion} = initialState;
   useEffect (()=>{
 
     fireDb.child("pacientes").on("value",(snapshot)=>{
@@ -29,6 +39,24 @@ const Tablavacunacion =()=> {
     });
 
   },[]);
+
+
+   const handleInputChange = (e) =>{
+    let{ name, value } = e.target;
+    if(name==="numidentificacion"){
+      setsearchTerm(value)
+    } 
+    else{
+    setState({
+      ...initialState,
+      [name]: value,
+
+    });
+
+     }
+    
+    };
+    
 
   const onDelete=(id) =>{
  Swal.fire({
@@ -98,7 +126,17 @@ const Tablavacunacion =()=> {
 
     
      <form className="d-flex2">
-        <input className="form-control me-2" type="search" placeholder="Número de Identificación" aria-label="Search"/>
+        
+        <input className="form-control me-2" 
+        type="search"
+        value={searchTerm} 
+        autocomplete="list"
+        placeholder="Número de Identificación" 
+        aria-label="Search"
+        name="numidentificacion"
+        onChange={handleInputChange}
+         />
+
         <button className="barrabusqueda" type="submit">Buscar</button>
       </form>
      
@@ -129,7 +167,17 @@ const Tablavacunacion =()=> {
       </tr>
       </thead>
       <tbody>
-      {Object.keys(data).map((id, index) => {
+     {Object.keys(data).filter((val) =>{
+        if (searchTerm === ""){
+          return val;
+        } else {
+          return data[val].numidentificacion?.includes(searchTerm)
+
+          }
+
+
+      }).map((id, index) => {
+       
         return(
          <tr key={id}> 
          <td>{index + 1}</td>

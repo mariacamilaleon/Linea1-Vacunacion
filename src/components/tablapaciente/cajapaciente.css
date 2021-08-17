@@ -125,7 +125,13 @@ span{
 
 
 @media screen and (max-width:425px){
-
+#botones{
+   max-width: 350px;
+   width: 100%;
+}
+#botones img{
+   margin-right: 40px;
+}
    .cajapaciente{
       min-height: 480px;
       height: 100%   ;
@@ -158,6 +164,33 @@ span{
     
    }
 } 
+
+
+@media screen and (max-width:375px){
+
+   .registropaciente{
+      margin: 3.5em 0 0 2.5em;
+      max-width: 280px;
+      width: 100%x;
+      font-size: 1em;
+   }
+
+   .d-flex2{
+      margin: 1em 0 0 1em;
+   }
+
+   .d-flex2 .form-control{
+      max-width: 220px;
+      width: 100%;
+       font-size: 1em;  
+   }
+   .d-flex2 button{
+       max-width: 100px;
+      width: 100%;
+      font-size: 1em;
+    
+   }
+}
 
 
 @media screen and (max-width:320px){

@@ -53,11 +53,10 @@ function App() {
             <Registrovacunacion/>
           </Route>
 
-
            <Route exact path="/registrovacuna">
             <Registrovacunacion/>
           </Route>
-          
+
 
            <Route exact path="/Viewpaciente/:id">
             <Viewpaciente/>

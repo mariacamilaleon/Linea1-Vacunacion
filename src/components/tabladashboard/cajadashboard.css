@@ -8,17 +8,12 @@
    background-image: url("../../assets/images/bannerDashboard.png");
 }
 
-
-
 #botones1{
    display: flex;
    padding-top: 8%;
    padding-left: 80px;
    margin: auto;
-
 }
-
-
 
 p{
 
@@ -132,10 +127,18 @@ span{
 
 @media screen and (max-width:425px){
 
+.caja{
+   min-height: 480px;
+   height: 100%;
+}
 
 #botones1{
-   width: 100%;
+ max-width: 400px;
+  width: 100%;
+  min-height: 200px;
+  height: 100%;
   margin: auto;
+  
 }
 
 #botones1 .vacunacion{
@@ -144,13 +147,19 @@ position: absolute;
 }
 
 #botones1 .paciente{
-   width: 120px;
+width: 120px;
 margin-left: 40px;
+
 }
 
-#botones1 p{
-   margin-left: 30px;
+#botones1 .paciente p{
+   margin:  5px 0 0 50px;
 }
+
+#botones1 .vacunacion p{
+   margin:  5px 0 0 20px;
+}
+
 
 .d-flex{
    margin-left: 5%;
@@ -170,22 +179,79 @@ button{
 
 }
 
-@media screen and (max-width:320px){
-
+@media screen and (max-width:375px){
 
 #botones1{
-  
+ max-width: 350px;
+  width: 100%;
+  min-height: 200px;
+  height: 100%;
+  margin: auto;
+  justify-content: space-between;
+}
+
+
+
+   #botones1 img{
+   width: 80px;
+   margin: auto;
+   
+}
+#botones1 .vacunacion img{
+   margin-left: 15px;
+}
+
+#botones1 .vacunacion p{
+   margin:  5px 0 0 20px ;
+}
+
+#botones1 .paciente p{
+   margin:  5px 0 0 35px;
+}
+
+.vacunacion{
+   max-width: 60px;
    width: 100%;
-   padding-right:80px;
+   margin-left: 170px;
+   height: 100px;
+}
+
+.paciente{
+   max-width: 100px;
+   width: 100%;
+   height: 100px;
+}
+
 }
 
 
 
-#botones1 img{
-   width: 60px;
+@media screen and (max-width:320px){
+
+#botones1{
+ max-width: 300px;
+  width: 100%;
+  min-height: 180px;
+  height: 100%;
+  margin: auto;
+  justify-content: space-between;
+  
 }
-#botones1 p{
-   margin-right: 55px;
+
+
+#botones1 .paciente img{
+      
+   margin-right: 20px;
+}
+
+#botones1 .paciente p{
+   margin: auto;
+   margin: 5px 0 0 30px;
+ }
+
+#botones1 .vacunacion p{
+
+   margin-left: 10px;
 }
 
 .d-flex{
@@ -203,6 +269,22 @@ button{
    width: 100%;
    font-size: 1em;   
 }
+.vacunacion{
+   max-width: 30px;
+   width: 100%;
+   margin-left: 170px;
+   height: 100px;
+
+}
+
+
+.paciente{
+   max-width: 50px;
+   width: 100%;
+   height: 100px;
+   padding: 0;
+}
+
 
 }
 

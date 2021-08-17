@@ -524,10 +524,10 @@ span{
 
 @media screen and (max-width:768px){
     .botonregistrar{
-        margin-left: 175px;
+        margin-left: 185px;
     }
     .botoncerrar{
-        margin-left: 300px;
+        margin-left: 400px;
     }
     .form-checkpaci{
         padding-left: 1.5em;
@@ -616,3 +616,74 @@ span{
     width: 160px;
     }
   }
+
+@media screen and (max-width:425px){
+    #tidocumento, #numidentificacion, #fechanacimiento, #edad, #rh, #regimen, #eps, #nacionalidad, .inputaque {
+        width: 100%;
+    }
+    .botoncerrar {
+      right: 200px;
+      top: 2028px;
+      position: absolute;
+    }
+
+    .botonregistrar{
+       max-width: 120px;
+      right: 60px;
+     top: 2028px;
+      position: absolute;
+    }
+
+
+}
+
+
+@media screen and (max-width:375px){
+
+    .botoncerrar {
+      max-width: 100px;
+      right: 180px;
+      top: 2030px;
+      position: absolute;
+    }
+    .botonregistrar{
+       max-width: 110px;
+        right: 40px;
+      top: 2030px;
+      position: absolute;
+    }
+     #renglonantecedentes{
+    max-width: 250px;
+    width: 100%;
+    text-align: justify;
+ 
+ }
+
+}
+
+
+@media screen and (max-width:320px){
+
+    .botoncerrar {
+      max-width: 100px;
+      right: 140px;
+      top: 2150px;
+      position: absolute;
+    }
+    .botonregistrar{
+       max-width: 100px;
+        right: 20px;
+      top: 2150px;
+      position: absolute;
+  
+    }
+    .botonregresar{
+          max-width: 100px;
+    }
+ #renglonantecedentes{
+    max-width: 200px;
+    width: 100%;
+    text-align: justify;
+ 
+ }
+}

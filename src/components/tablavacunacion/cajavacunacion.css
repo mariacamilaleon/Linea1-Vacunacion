@@ -21,3 +21,11 @@ span{
 }
 
 
+@media screen and (max-width:425px){
+
+.cajavacunacion{
+   min-height: 480px;
+   height: 100%;
+}
+}
+
