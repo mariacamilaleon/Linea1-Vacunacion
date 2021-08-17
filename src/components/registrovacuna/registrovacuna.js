@@ -70,15 +70,15 @@ const onRegister=(id) =>{
  Swal.fire({
 
   html:
-   '<b style="color:black; font-size: 2em ">Datos de vacunación registrados con éxito</b></br><b style="color:red; font-size: 1.5em ">¿Desea continuar en la página de vacunación o  ir a la página de inicio? </b>',
+   '<b style="color:black; font-size: 2em ">Datos de vacunación registrados con éxito</b></br><b style="font-size: 1.5em ">¿Desea continuar en la página de vacunación o  ir a la página de inicio? </b>',
   width: 600,
   background: 'rgba(237, 240, 250) ',
   imageUrl: 'https://forjaempresas.com/wp-content/uploads/2020/08/Logos-01-1.png',
   showCancelButton: true,
   confirmButtonColor: '#d33',
   cancelButtonColor: '#F2692F',
-  confirmButtonText: 'Vacunacion!',
-  cancelButtonText: 'Inicio',
+  confirmButtonText: 'Ir a Vacunacion',
+  cancelButtonText: 'Ir a Inicio',
 
 }).then((result) => {
   if (result.isConfirmed) {
@@ -308,6 +308,7 @@ const onRegister=(id) =>{
                           <label id="renglonaplicacion" htmlFor="lugar">Lugar de aplicación: </label>
                      <select className="inputselectlugar form-select form-selectlugar" name="establecimientodosis1" id="establecimientodosis1" value={establecimientodosis1} onChange={handleInputChange} required>    
                        <option selected disabled value="">Seleccione lugar</option>
+                       <option value="forjaempresas">Forja</option>
                        <option value="Plaza de las Américas">Plaza de las Américas</option>
                        <option value="Plaza Imperial">Plaza Imperial</option>
                        <option value="Compensar Avenida 68">Compensar Avenida 68</option>
@@ -355,6 +356,7 @@ const onRegister=(id) =>{
                         <label id="renglonlugar" htmlFor="lugar">Lugar de aplicación: </label>
                      <select className="inputlugar form-select form-selectlugar" name="establecimientodosis2" id="establecimientodosis2" value={establecimientodosis2} onChange={handleInputChange} required>    
                        <option selected disabled value="">Seleccione lugar</option>
+                       <option value="forjaempresas">Forja</option>
                        <option value="Plaza de las Américas">Plaza de las Américas</option>
                        <option value="Plaza Imperial">Plaza Imperial</option>
                        <option value="Compensar Avenida 68">Compensar Avenida 68</option>
@@ -381,11 +383,11 @@ const onRegister=(id) =>{
                      
              <div className="row">
                 <div className="col-sm-12 col-md-6 col-lg-9 mt-3">
-                      <Link to={`/vacunacion`}><button  className="botoncerrar">CERRAR</button></Link>
+                      <Link to={`/vacunacion`}><button  className="botoncerrar1">CERRAR</button></Link>
 
                     </div>
                      <div className="col-sm-12 col-md-6 col-lg-3 mt-3">
-                     <button type="submit"  className="botonregistrar"  >GUARDAR</button>
+                     <button type="submit"  className="botonregistrar1"  >GUARDAR</button>
                     </div>
                    </div> 
              </form>

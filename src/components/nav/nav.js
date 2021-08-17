@@ -11,11 +11,11 @@ function Nav() {
      <nav className="menu">
   <ul>
 
-      <li><NavLink to="/paciente" activeClassName="active" >Paciente</NavLink></li>
+      <li><NavLink to="/paciente" activeClassName="active" ><i className="fa fa-home"/> Paciente</NavLink></li>
       
 
   
-  <li><NavLink to="/vacunacion" activeClassName="active">  Vacunacion</NavLink></li>
+  <li><NavLink to="/vacunacion" activeClassName="active"><i className="fa fa-envelope-o"/>  Vacunacion</NavLink></li>
 </ul>
 
 </nav>

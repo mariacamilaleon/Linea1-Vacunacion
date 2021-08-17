@@ -84,7 +84,7 @@
     margin-left: 30px;
     
 }
-.botoncerrar{
+.botoncerrar1{
     color: #fff;
     background: #F2692F;
     border-color: #F2692F;
@@ -96,7 +96,7 @@
     margin-left: 600px;
     
 }
-.botonregistrar{
+.botonregistrar1{
     color: #fff;
     background: #F2692F;
     border-color: #F2692F;
@@ -115,7 +115,7 @@
     border-radius: 5px;
     box-shadow: 2px 2px 8px #000000;
 }
-.botonregistrar:hover {
+.botonregistrar1:hover {
     background-color:#A7A9AC;
     color: #000;
     border:1px solid #A7A9AC;
@@ -123,7 +123,7 @@
     border-radius: 5px;
     box-shadow: 2px 2px 8px #000000;
 }
-.botoncerrar:hover{
+.botoncerrar1:hover{
     background-color:#A7A9AC;
     color: #000;
     border:1px solid #A7A9AC;
@@ -464,11 +464,11 @@ span{
 
 
 @media screen and (max-width:768px){
-    .botonregistrar{
+    .botonregistrar1{
         margin-left: 200px;
     }
-    .botoncerrar{
-        margin-left: 380px;
+    .botoncerrar1{
+        margin-left: 420px;
     }
     .form-selectlugar {
     width: 69%;
@@ -542,3 +542,69 @@ span{
 
     }
   }
+
+
+
+@media screen and (max-width:425px){
+     .cajafor{
+        height: 86%;
+    }
+
+      .inputnom3, .inputfecha2, .inputid, .inputnom, .inputcuales, .inputnomti, .inputfecha, .inputselectlugar, .inputlugar{
+        width: 100%;
+    }
+
+     .botoncerrar1 {
+      right: 200px;
+      top: 1800px;
+      position: absolute;
+    }
+
+    .botonregistrar1{
+       max-width: 120px;
+      right: 60px;
+     top: 1800px;
+      position: absolute;
+    
+    }
+
+}
+
+  @media screen and (max-width:375px){
+    .cajafor{
+        height: 86%;
+    }
+      .botoncerrar1 {
+      max-width: 100px;
+      right: 180px;
+      top: 1870px;
+      position: absolute;
+    }
+    .botonregistrar1{
+       max-width: 110px;
+        right: 40px;
+      top: 1870px;
+      position: absolute;
+    }
+
+    }
+
+@media screen and (max-width:320px){
+    .cajafor{
+        height: 85%;
+    
+    }
+     .botoncerrar1 {
+      max-width: 100px;
+      right: 140px;
+      top: 1930px;
+      position: absolute;
+    }
+    .botonregistrar1{
+       max-width: 100px;
+        right: 20px;
+      top: 1930px;
+      position: absolute;
+     
+    }
+    }

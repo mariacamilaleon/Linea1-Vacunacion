@@ -5,7 +5,7 @@ import editar from "../../assets/images/usuario.png"
 import eliminar from "../../assets/images/basura.png"
 import './tablapaciente.css';
 import './cajapaciente.css';
-import {BrowserRouter as Router,Switch,Route,Link, NavLink, Redirect, useParams} from "react-router-dom";
+import {BrowserRouter as Router,Switch,Route,Link, NavLink, Redirect} from "react-router-dom";
 import Swal from "sweetalert2";
 import React, {useState, useEffect} from 'react';
 import fireDb from "../../firebase";
@@ -17,17 +17,12 @@ const Tablapaciente =()=> {
   const [searchTerm, setsearchTerm] = useState("");
 
  const values = {
-   
-    numidentificacion: "",
-   
-  };
+     numidentificacion: "",
+     };
 
  const [data, setData] =  useState({});
  const [initialState, setState] = useState(values);
  const{ numidentificacion} = initialState;
-
- let currentId = useParams();
-  const {id} = currentId;
 
 
 
@@ -46,6 +41,20 @@ const Tablapaciente =()=> {
 
   },[]);
 
+const handleInputChange = (e) =>{
+    let{ name, value } = e.target;
+    if(name==="numidentificacion"){
+      setsearchTerm(value)
+    }
+    else{
+    setState({
+      ...initialState,
+      [name]: value,
+    });
+   }
+       
+ };
+    
 
 
  const onDelete=(id) =>{
@@ -93,25 +102,6 @@ const Tablapaciente =()=> {
   };
 
 
- const handleInputChange = (e) =>{
-    let{ name, value } = e.target;
-    if(name==="numidentificacion"){
-      setsearchTerm(value)
-    } 
-    else{
-    setState({
-      ...initialState,
-      [name]: value,
-
-    });
-
-     }
-    
-    };
-    
-
-
-
   return (
 
      <div className="tablapaciente">
@@ -119,9 +109,6 @@ const Tablapaciente =()=> {
  <div className="cajapaciente">
 
     <div id="botones1" >
-
-
-
     
     <div className="paciente">
     <NavLink to="dashboard" activeClassName="active" style={{textDecoration: 'none', color: "white"}}><img src={paciente} alt="usuario" width="100px"/><p>Inicio</p></NavLink>
@@ -197,7 +184,8 @@ const Tablapaciente =()=> {
         if (searchTerm === ""){
           return val;
         } else {
-          return data[val].numidentificacion.includes(searchTerm)
+          return data[val].numidentificacion?.includes(searchTerm)
+
           }
 
 

@@ -13,7 +13,20 @@ import fireDb from "../../firebase";
 
 const Tabladashboard =()=> {
 
-  const [data, setData] =  useState({});
+
+  const [searchTerm, setsearchTerm] = useState("");
+
+ const values = {
+   
+    numidentificacion: "",
+   
+  };
+
+ const [data, setData] =  useState({});
+ const [initialState, setState] = useState(values);
+ const{ numidentificacion} = initialState;
+const [filteredData, setFilteredData]= useState([]);
+
 
   useEffect (()=>{
 
@@ -28,6 +41,23 @@ const Tabladashboard =()=> {
     });
 
   },[]);
+
+  const handleInputChange = (e) =>{
+    let{ name, value } = e.target;
+    if(name==="numidentificacion"){
+      setsearchTerm(value)
+    } 
+    else{
+    setState({
+      ...initialState,
+      [name]: value,
+
+    });
+
+     }
+    
+    };
+    
 
   const onDelete=(id) =>{
     if(window.confirm("Está seguro de que quiere eliminar este dato?")){
@@ -58,12 +88,36 @@ const Tabladashboard =()=> {
 
     </div>
    
+   <div className="barras">
+
+ 
+    <button className="registropaciente" type="submit"><NavLink to="/registropaciente" style={{textDecoration: 'none', color: "white"}}>Registro Nuevo Paciente</NavLink></button>
    
 
-     <form className="d-flex">
-        <input className="form-control me-2" type="search" placeholder="Número de Identificación" aria-label="Search"/>
-        <button className="barrabusqueda" type="submit">Buscar</button>
+    
+     <form className="d-flex2">
+     
+     
+        <input className="form-control me-2" 
+        type="search"
+        value={searchTerm} 
+        autocomplete="list"
+        placeholder="Número de Identificación" 
+        aria-label="Search"
+        name="numidentificacion"
+
+        onChange={handleInputChange}
+         />
+
+          
+                 <button className="barrabusqueda" type="submit">Buscar</button>
+         
+        
+             
       </form>
+     
+
+      </div>
 
     </div>
 
@@ -92,7 +146,15 @@ const Tabladashboard =()=> {
       </tr>
       </thead>
       <tbody>
-      {Object.keys(data).map((id, index) => {
+
+      {data?(Object.keys(data).filter((val) =>{
+        if (searchTerm === ""){
+          return val;
+        } else {
+          return data[val].numidentificacion?.includes(searchTerm)
+          }
+
+      }).map((id, index) => {
         return(
          <tr key={id}> 
          <td>{index + 1}</td>
@@ -108,16 +170,17 @@ const Tabladashboard =()=> {
          
          
 
-                    <td><Link to={`/Viewdashboard/${id}`}><img src={ver} alt="masdetalles" width="30px"/></Link></td>
+        <td><Link to={`/Viewdashboard/${id}`}><img src={ver} alt="masdetalles" width="30px"/></Link></td>
          <td><Link to={`/update2/${id}`}><img src={vacuna} alt="vacuna" width="30px"/></Link></td>
         
 
          </tr>
         )
 
-        })}
-     
-     
+        })):
+        <div>("No hay registro, desea registrar nuevo paciente?")</div>
+        } 
+        
 
 
       </tbody>
